@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">EasyCity</string>
+    <string name="facebook_app_id">457593628232044</string>
+    <string name="fb_login_protocol_scheme">fb457593628232044</string>
+
 </resources>
