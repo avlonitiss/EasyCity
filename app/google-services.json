@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1083564368252",
+    "firebase_url": "https://easycityproject.firebaseio.com",
+    "project_id": "easycityproject",
+    "storage_bucket": "easycityproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1083564368252:android:42b180b1afce31afb6c4f9",
+        "android_client_info": {
+          "package_name": "org.rome.easycity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1083564368252-hsr4tsu8sfcfgfp65qt82qa0tup4h3a2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.rome.easycity",
+            "certificate_hash": "0619f721ed45d5c8cd682cc40904cd4cc61a2598"
+          }
+        },
+        {
+          "client_id": "1083564368252-rr0j1i7qmorrda0uvd447qff16tojvbe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmIJ-DagyE12BIxscwa8dzeys4a5UTO-M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1083564368252-rr0j1i7qmorrda0uvd447qff16tojvbe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
