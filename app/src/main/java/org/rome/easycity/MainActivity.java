@@ -33,7 +33,9 @@ import java.util.Arrays;
 
 
 public class MainActivity extends AppCompatActivity {
-    private FirebaseAuth mAuth;
+    FirebaseAuth mAuth;
+    FirebaseUser mUser;
+    FirebaseAuth.AuthStateListener mAuthListener;
     private static final String TAG = "MainActivity";
 
     private LoginButton loginButton;
@@ -51,23 +53,20 @@ public class MainActivity extends AppCompatActivity {
 // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance();
         mCallbackManager = CallbackManager.Factory.create();
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        if(currentUser!=null){
-            setContentView(R.layout.activity_easy_city_maps);
+        Intent intent = getIntent();
+
+
+        @Override
+        public void onStart () {
+            super.onStart();
+            // Check if user is signed in (non-null) and update UI accordingly.
+            //τερματισμός του listener στο logout.
+            mAuth.removeAuthStateListener(mAuthListener);
         }
+
+
     }
-
-
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-       if(currentUser!=null){
-           setContentView(R.layout.activity_easy_city_maps);
-       }
-    }
-
 
 }
+
+

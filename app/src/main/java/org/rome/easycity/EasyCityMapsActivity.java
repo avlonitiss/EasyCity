@@ -39,9 +39,18 @@ public class EasyCityMapsActivity extends FragmentActivity implements OnMapReady
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
-        // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        // Προσδιορισμός εκδηλώσεων από backend
+        float zoomLevel = (float) 13.0;
+        LatLng myLocation = new LatLng(37.98, 23.72);
+        LatLng museum = new LatLng(37.989, 23.732);
+        LatLng acropol = new LatLng(37.971, 23.725);
+
+
+        mMap.addMarker(new MarkerOptions().position(myLocation).title("Είμαι εδώ"));
+        mMap.addMarker(new MarkerOptions().position(museum).title("ΕΘΝΙΚΟ ΑΡΧΑΙΟΛΟΓΙΚΟ ΜΟΥΣΕΙΟ").snippet("Ομιλία του καθηγητή Ερενίδη  12 Ιουνίου στις 13:30"));
+        mMap.addMarker(new MarkerOptions().position(acropol).title("ΑΚΡΟΠΟΛΙΣ ΑΘΗΝΩΝ").snippet("Ξενάγηση με τον καθηγητή κ. Χαραλαμπόπουλο 20 Μαΐου στις 11:00 πμ "));
+
+
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(myLocation,zoomLevel));
     }
 }
