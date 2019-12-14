@@ -202,7 +202,7 @@ public class MainActivity extends AppCompatActivity {
 
         // [END send_email_verification_with_continue_url]
         // [START localize_verification_email]
-        auth.setLanguageCode("fr");
+        auth.setLanguageCode("en");
         // To apply the default app language instead of explicitly setting it.
         // auth.useAppLanguage();
         // [END localize_verification_email]
