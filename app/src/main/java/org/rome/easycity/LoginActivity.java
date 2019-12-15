@@ -68,8 +68,8 @@ public class LoginActivity extends AppCompatActivity {
 
         else {
 
-            loadingBar.setTitle("Δημιουργία νέου λογαριασμού");
-            loadingBar.setMessage("Παρακαλώ περιμένετε μέχρι να δημιουργήσουμε τον λογαριασμό σας");
+            loadingBar.setTitle("Διαδικασία σύνδεσης");
+            loadingBar.setMessage("Παρακαλώ περιμένετε μέχρι να ελεγθεί και να επιτραπεί η σύνδεση");
             loadingBar.show();
             loadingBar.setCanceledOnTouchOutside(true);
 
