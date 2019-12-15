@@ -5,6 +5,10 @@
     <string name="facebook_login_protocol_scheme" translatable="false">fb457593628232044</string>
 
     <string name="title_activity_easy_city_maps">easyCityMap</string>
+    <string name="logo_description">easyCityLogo</string>
+    <string name="email">Email ...</string>
+    <string name="password">Password ...</string>
+    <string name="confirm_password">confirm password</string>
 
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
