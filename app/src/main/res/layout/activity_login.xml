@@ -99,16 +99,18 @@
         <ImageView
             android:layout_width="100dp"
             android:layout_height="80dp"
-            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
             android:layout_marginTop="8dp"
-            android:src="@drawable/facebook_box" />
+            android:src="@drawable/facebook_box"
+            android:contentDescription="@string/fbicon" />
 
         <ImageView
             android:layout_width="100dp"
             android:layout_height="80dp"
             android:src="@drawable/common_google_signin_btn_icon_dark"
-            android:layout_marginLeft="145dp"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginStart="145dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/googleicon" />
 
     </LinearLayout>
 

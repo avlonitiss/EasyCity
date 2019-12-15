@@ -13,6 +13,8 @@
     <string name="login">Login</string>
     <string name="login_info">Δεν υπάρχει ο λογαριασμός. Θέλετε έναν;</string>
     <string name="loginwith">ή συνδεθείτε με</string>
+    <string name="fbicon">fbicon</string>
+    <string name="googleicon">googleicon</string>
 
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
