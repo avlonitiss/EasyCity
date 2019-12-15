@@ -78,6 +78,6 @@
         android:textAllCaps="false"
         android:textSize="24sp"
         android:textStyle="bold"
-        tools:text="Δημιουργία Λογαριασμού" />
+        />
 
 </RelativeLayout>

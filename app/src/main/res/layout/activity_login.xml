@@ -52,4 +52,19 @@
         android:padding="10dp"
         />
 
+    <Button
+        android:id="@+id/login_button"
+        style="@style/FirebaseUI.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="95dp"
+        android:background="@drawable/button"
+        android:padding="15dp"
+        android:text="@string/login"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:textStyle="bold"
+         />
+
 </RelativeLayout>
