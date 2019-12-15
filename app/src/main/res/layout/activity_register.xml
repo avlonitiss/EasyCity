@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    tools:context=".RegisterActivity"
+    android:background="@color/browser_actions_divider_color">
 
     <ImageView
         android:id="@+id/imageView2"
@@ -22,7 +23,7 @@
         app:srcCompat="@mipmap/ic_launcher_foreground" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/register_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -30,10 +31,14 @@
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/email"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        android:background="@drawable/inputs"
+        android:padding="10dp"
+        android:drawableStart="@drawable/email32p"
+        />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/register_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -41,10 +46,13 @@
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:background="@drawable/inputs"
+        android:padding="10dp"
+        />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/register_confirm_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -52,6 +60,24 @@
         android:ems="10"
         android:hint="@string/confirm_password"
         android:inputType="textPassword"
-        android:importantForAutofill="no" />
+        android:importantForAutofill="no"
+        android:background="@drawable/inputs"
+        android:padding="10dp"
+        />
+
+    <Button
+        android:id="@+id/register_create_account"
+        style="@style/FirebaseUI.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="95dp"
+        android:background="@drawable/button"
+        android:padding="15dp"
+        android:text="@string/createaccountbuttontext"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:text="Δημιουργία Λογαριασμού" />
 
 </RelativeLayout>
