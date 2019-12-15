@@ -11,6 +11,8 @@
     <string name="confirm_password">confirm password</string>
     <string name="createaccountbuttontext">Δημιουργία Λογαριασμού</string>
     <string name="login">Login</string>
+    <string name="login_info">Δεν υπάρχει ο λογαριασμός. Θέλετε έναν;</string>
+    <string name="loginwith">ή συνδεθείτε με</string>
 
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
