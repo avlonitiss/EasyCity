@@ -99,8 +99,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void SendUserToMainActivity() {
-        Intent registerIntent = new Intent(LoginActivity.this, MainActivity.class );
-        startActivity(registerIntent);
+        Intent mainIntent = new Intent(LoginActivity.this, MainActivity.class );
+        startActivity(mainIntent);
 
     }
 
