@@ -2,7 +2,9 @@ package org.rome.easycity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -20,8 +22,22 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        NeedNewAccountLink = (TextView) findViewById(R.id.register_create_account);
+        NeedNewAccountLink = (TextView) findViewById(R.id.register_account_link);
         UserEmail = (EditText) findViewById(R.id.login_email);
         UserPassword = (EditText) findViewById(R.id.login_password);
+
+        NeedNewAccountLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SendUserToRegisterActivity();
+            }
+        });
+    }
+
+    private void SendUserToRegisterActivity() {
+
+        Intent registerIntent = new Intent(LoginActivity.this, RegisterActivity.class );
+        startActivity(registerIntent);
+        finish();
     }
 }
