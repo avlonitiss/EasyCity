@@ -2,7 +2,9 @@ package org.rome.easycity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.swiperefreshlayout.widget.CircularProgressDrawable;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -23,6 +25,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText UserEmail, UserPassword;
     private TextView NeedNewAccountLink;
     private FirebaseAuth mAuth;
+    private ProgressDialog loadingBar;
 
 
 
@@ -35,6 +38,7 @@ public class LoginActivity extends AppCompatActivity {
         UserEmail = (EditText) findViewById(R.id.login_email);
         UserPassword = (EditText) findViewById(R.id.login_password);
         mAuth = FirebaseAuth.getInstance();
+        loadingBar = new ProgressDialog(this);
 
         NeedNewAccountLink.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,24 +67,41 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         else {
+
+            loadingBar.setTitle("Δημιουργία νέου λογαριασμού");
+            loadingBar.setMessage("Παρακαλώ περιμένετε μέχρι να δημιουργήσουμε τον λογαριασμό σας");
+            loadingBar.show();
+            loadingBar.setCanceledOnTouchOutside(true);
+
+
             mAuth.signInWithEmailAndPassword(email, password)
                     .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
 
                             if(task.isSuccessful()){
+
+                                SendUserToMainActivity();
                                 Toast.makeText(LoginActivity.this, "Συνδεθήκατε ...", Toast.LENGTH_SHORT).show();
+                                loadingBar.dismiss();
                             }
 
                             else {
 
                                 String message = task.getException().toString();
                                 Toast.makeText(LoginActivity.this, "Κάτι πήγε στραβά "+message, Toast.LENGTH_SHORT).show();
+                                loadingBar.dismiss();
                             }
 
                         }
                     });
         }
+    }
+
+    private void SendUserToMainActivity() {
+        Intent registerIntent = new Intent(LoginActivity.this, MainActivity.class );
+        startActivity(registerIntent);
+
     }
 
     private void SendUserToRegisterActivity() {
