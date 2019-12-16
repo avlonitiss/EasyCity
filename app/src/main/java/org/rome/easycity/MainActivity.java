@@ -62,9 +62,9 @@ public class MainActivity extends AppCompatActivity {
 
         super.onStart();
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        if(currentUser == null){
-            SendUserToLoginActivity();
-        }
+       // if(currentUser == null){
+       //     SendUserToLoginActivity();
+       // }
     }
 
     private void SendUserToLoginActivity() {
