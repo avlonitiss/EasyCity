@@ -23,6 +23,7 @@
     <string name="settings">Settings</string>
     <string name="logout">Logout</string>
     <string name="profile">Profile</string>
+    <string name="username">TextView</string>
 
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>

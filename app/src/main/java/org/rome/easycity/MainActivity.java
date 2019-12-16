@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.google.android.material.internal.NavigationMenu;
+import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import android.content.Intent;
@@ -12,7 +14,11 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.util.Log;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.facebook.AccessToken;
@@ -47,6 +53,9 @@ public class MainActivity extends AppCompatActivity {
     FirebaseUser mUser;
     FirebaseAuth.AuthStateListener mAuthListener;
     private static final String TAG = "MainActivity";
+    private NavigationView navigationView;
+    private DrawerLayout drawerLayout;
+    private RecyclerView postList;
 
 
     @Override
@@ -54,8 +63,55 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawable_layout);
+        navigationView = (NavigationView) findViewById(R.id.navigation_view);
+navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        UserMenuSelector(menuItem);
+        return false;
+
+    }
+});
+
         mAuth=FirebaseAuth.getInstance();
 
+    }
+
+    private void UserMenuSelector(MenuItem menuItem) {
+
+        switch(menuItem.getItemId()){
+
+            case R.id.nav_profile:
+                Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.nav_home:
+                Toast.makeText(this, "Home", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.nav_friends:
+                Toast.makeText(this, "Friend List", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.nav_find_friends:
+                Toast.makeText(this, "Find friends", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.nav_messages:
+                Toast.makeText(this, "Messages", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.nav_settings:
+                Toast.makeText(this, "Settings", Toast.LENGTH_SHORT).show();
+                break;
+
+            case R.id.nav_logout:
+                Toast.makeText(this, "Logout", Toast.LENGTH_SHORT).show();
+                break;
+
+
+        }
     }
 
     protected void onStart(){
