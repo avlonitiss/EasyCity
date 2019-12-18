@@ -91,15 +91,15 @@ public class MainActivity extends AppCompatActivity {
                 break;
 
             case R.id.nav_home:
-                Toast.makeText(this, "Home", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "My Position", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.nav_friends:
-                Toast.makeText(this, "Friend List", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Your Proposals", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.nav_find_friends:
-                Toast.makeText(this, "Find friends", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Find Bonus", Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.nav_messages:
